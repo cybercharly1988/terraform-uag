@@ -1,6 +1,6 @@
 #!/bin/bash
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
-yum install -y httpd
+yum install -y httpd tmux
 systemctl start httpd
 systemctl enable httpd
 firewall-cmd --add-port=80/tcp --permanent

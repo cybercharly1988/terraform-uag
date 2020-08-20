@@ -3,7 +3,7 @@ resource "aws_autoscaling_group" "my_first_asg" {
   load_balancers       = ["${aws_elb.my_first_elb.name}"]
   availability_zones   = var.azs
 
-  min_size         = 2
+  min_size         = 3
   max_size         = 10
   desired_capacity = 3
   tag {
